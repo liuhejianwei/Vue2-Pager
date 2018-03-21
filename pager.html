@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <!--vue-->
+    <script type="text/javascript" src="lib/vue.min.js?v=3.0.0"></script>
+    <!--vue自定定组件-->
+    <script type="text/javascript" src="lib/vue.components.js?v=3.0.0"></script>
+
+
+    <!-- 提示框样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"/>
+    <!-- 提示框功能 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+    <!--样式-->
+    <link href="http://js.soufunimg.com/zbs/newhouse/css/sfpc_base.css" type="text/css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="http://kehu.beta.fang.com/Resourse/css/crm.css?v=3.0.0" />
+    <link rel="stylesheet" href="http://kehu.beta.fang.com/Resourse/css/work_plat.css">
+
+
+</head>
+<body>
+    <div id="box">
+        <!--pagesize每页多少行,allcount共多少行数据,showcount当前显示的页数-->
+        <pager pagesize="20" allcount="100" showcount="5" v-on:pindex="getpindex"></pager>
+    </div>
+    <script>
+        new Vue({
+            el: '#box',  //div的id
+            methods:{
+                getpindex(pindex)
+                {
+                    alert("第"+pindex+"页");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
